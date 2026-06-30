@@ -1,0 +1,57 @@
+{
+  "name": "media-tracker",
+  "version": "3.0.0",
+  "description": "Desktop app to track your video and audio watching progress",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "build": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux"
+  },
+  "keywords": [
+    "media",
+    "tracker",
+    "video",
+    "progress",
+    "electron"
+  ],
+  "author": "aidin ghazagh",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.mediatracker.app",
+    "productName": "Media Tracker",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "app.js",
+      "index.html",
+      "styles.css",
+      "assets/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.png"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icon.png"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "assets/icon.png"
+    }
+  },
+  "dependencies": {
+    "ffmpeg-static": "^5.3.0",
+    "matroska-subtitles": "^3.3.2"
+  }
+}
