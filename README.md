@@ -32,7 +32,7 @@ A desktop application for tracking your video and audio watching progress. Built
 ### Setup
 
 ```bash
-git clone https://github.com/aidin-ghazagh/media-tracker.git
+git clone https://github.com/aidinghazagh/media-tracker.git
 cd media-tracker
 npm install
 ```
